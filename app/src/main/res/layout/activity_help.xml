@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Author: Eric Gilchrist-->
+
 
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--Title Layout-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -12,6 +15,7 @@
         android:layout_row="0"
         android:layout_column="0">
 
+        <!--Title Text-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,6 +26,7 @@
             android:textSize="34dp" />
     </LinearLayout>
 
+    <!--Information Layout-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
@@ -30,6 +35,7 @@
         android:layout_column="0"
         android:weightSum="1">
 
+        <!--Help Information Text-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,6 +45,7 @@
             android:layout_weight="0.85" />
     </LinearLayout>
 
+    <!--Button Layout-->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -47,6 +54,7 @@
         android:layout_column="0"
         android:weightSum="1">
 
+        <!--Recover Drone Button-->
         <Button
             android:layout_width="110dp"
             android:layout_height="match_parent"
@@ -54,12 +62,14 @@
             android:id="@+id/button4"
             android:layout_weight="0.76" />
 
+        <!--Emergency Reset Button-->
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Emergency Reset"
             android:id="@+id/button5" />
 
+        <!--Send Help Email to Team Button-->
         <Button
             android:layout_width="110dp"
             android:layout_height="match_parent"
@@ -68,13 +78,14 @@
             android:layout_weight="0.30" />
     </LinearLayout>
 
+    <!--Software Version Layout-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="91dp"
         android:layout_row="6"
         android:layout_column="0">
-
+        <!--Software Version Text-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,6 +95,7 @@
             android:textAlignment="center"
             android:layout_gravity="center_horizontal" />
 
+        <!--Release Version Number-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

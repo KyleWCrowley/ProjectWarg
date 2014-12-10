@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--    Authors:    Kyle Crowley        -->
+<!--                Eli Gabay           -->
+<!--                Mitchell Martinez   -->
+<!--                Eric Gilchrist      -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="teamwarg.projectwarg">
 

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Author: Eric Gilchrist-->
+
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -11,6 +13,7 @@
         android:layout_row="0"
         android:layout_column="0">
 
+        <!--Settings Title-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,6 +24,7 @@
             android:textSize="64dp" />
     </LinearLayout>
 
+    <!--Layout for Pitch Sensitivity-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="380dp"
@@ -28,6 +32,7 @@
         android:layout_row="1"
         android:layout_column="0">
 
+        <!--Pitch Sensitivity Text-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,12 +41,14 @@
             android:id="@+id/textView7"
             android:layout_gravity="center_horizontal" />
 
+        <!--Pitch Sensitivity Seekbar-->
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/seekBar2" />
     </LinearLayout>
 
+    <!--Layout for Yaw Sensitivity-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="380dp"
@@ -49,6 +56,7 @@
         android:layout_row="2"
         android:layout_column="0">
 
+        <!--Yaw Sensitivity Text-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,12 +65,14 @@
             android:id="@+id/textView8"
             android:layout_gravity="center_horizontal" />
 
+        <!--Yaw Sensitivity Seekbar-->
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/seekBar3" />
     </LinearLayout>
 
+    <!--MaxSpeed Layout-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="380dp"
@@ -70,6 +80,7 @@
         android:layout_row="3"
         android:layout_column="0">
 
+        <!--MaxSpeed Text-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,12 +89,14 @@
             android:id="@+id/textView9"
             android:layout_gravity="center_horizontal" />
 
+        <!--MaxSpeed Seekbar-->
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/seekBar4" />
     </LinearLayout>
 
+    <!--MaxHeight Layout-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="380dp"
@@ -91,6 +104,7 @@
         android:layout_row="4"
         android:layout_column="0">
 
+        <!--MaxHeight Text-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -99,12 +113,14 @@
             android:id="@+id/textView10"
             android:layout_gravity="center_horizontal" />
 
+        <!--MaxHeight Seekbar-->
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/seekBar5" />
     </LinearLayout>
 
+    <!--Bottom Row Buttons Layout-->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="380dp"
@@ -113,6 +129,7 @@
         android:layout_column="0"
         android:weightSum="1">
 
+        <!--Return (Back) Button-->
         <Button
             android:layout_width="126dp"
             android:layout_height="match_parent"
@@ -120,6 +137,7 @@
             android:id="@+id/button2"
             android:layout_weight="0.29" />
 
+        <!--Reset Settings Button-->
         <Button
             android:layout_width="126dp"
             android:layout_height="match_parent"
@@ -127,6 +145,7 @@
             android:id="@+id/button"
             android:layout_weight="0.29" />
 
+        <!--Apply Changes Button-->
         <Button
             android:layout_width="126dp"
             android:layout_height="match_parent"
@@ -135,6 +154,7 @@
             android:layout_weight="0.29" />
     </LinearLayout>
 
+    <!--Enable Custom Settings Layout-->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="380dp"
@@ -142,6 +162,7 @@
         android:layout_row="6"
         android:layout_column="0">
 
+        <!--Custom Settings Checkbox-->
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

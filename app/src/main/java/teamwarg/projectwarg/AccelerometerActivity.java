@@ -1,3 +1,12 @@
+//////////////////////////////////////////////
+//              PROJECT WARG                //
+//                                          //
+//              KYLE CROWLEY                //
+//              MITCHELL MARTINEZ           //
+//              ELI GABAY                   //
+//              ERIC GILCHRIST              //
+//                                          //
+//////////////////////////////////////////////
 package teamwarg.projectwarg;
 
 import android.app.Activity;
@@ -7,6 +16,9 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.TextView;
+
+//  Authors:    Eli Gabay
+//              Mitchell Martinez
 
 public class AccelerometerActivity extends Activity implements SensorEventListener {
 

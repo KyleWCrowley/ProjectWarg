@@ -1,5 +1,13 @@
+//////////////////////////////////////////////
+//              PROJECT WARG                //
+//                                          //
+//              KYLE CROWLEY                //
+//              MITCHELL MARTINEZ           //
+//              ELI GABAY                   //
+//              ERIC GILCHRIST              //
+//                                          //
+//////////////////////////////////////////////
 package teamwarg.projectwarg;
-
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +17,9 @@ import android.view.MenuItem;
 import android.view.View;
 
 
+//  Author: Kyle Crowley
+//  This class creates the introduction screen
+//  Consists of the terms of use and an accept button
 public class MainActivity extends Activity {
 
     @Override
@@ -21,6 +32,7 @@ public class MainActivity extends Activity {
         }
     }
 
+    // function called when the Accept button is pressed
     public void buttonStart(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);

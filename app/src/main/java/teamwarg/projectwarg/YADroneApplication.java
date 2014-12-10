@@ -1,6 +1,16 @@
+//////////////////////////////////////////////
+//              PROJECT WARG                //
+//                                          //
+//              KYLE CROWLEY                //
+//              MITCHELL MARTINEZ           //
+//              ELI GABAY                   //
+//              ERIC GILCHRIST              //
+//                                          //
+//////////////////////////////////////////////
 package teamwarg.projectwarg;
 
-
+//Code sourced from the YADrone Project
+//http://vsis-www.informatik.uni-hamburg.de/oldServer/teaching//projects/yadrone/
 import android.app.Application;
 
 import de.yadrone.base.ARDrone;

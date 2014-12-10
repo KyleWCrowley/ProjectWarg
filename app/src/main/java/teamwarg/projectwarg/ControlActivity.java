@@ -1,3 +1,12 @@
+//////////////////////////////////////////////
+//              PROJECT WARG                //
+//                                          //
+//              KYLE CROWLEY                //
+//              MITCHELL MARTINEZ           //
+//              ELI GABAY                   //
+//              ERIC GILCHRIST              //
+//                                          //
+//////////////////////////////////////////////
 package teamwarg.projectwarg;
 
 import android.os.Bundle;
@@ -9,6 +18,9 @@ import android.widget.Button;
 
 import de.yadrone.base.IARDrone;
 
+//  Author: Kyle Crowley
+
+//  This class creates the drone control activity
 public class ControlActivity extends ActionBarActivity {
 
     @Override
@@ -19,6 +31,9 @@ public class ControlActivity extends ActionBarActivity {
         createControls();
     }
 
+    //  This function initializes listening for individual button inputs
+    //  This function utilizes modified code from the YADrone project
+    //  http://vsis-www.informatik.uni-hamburg.de/oldServer/teaching//projects/yadrone/
     private void createControls() {
         YADroneApplication app = (YADroneApplication) getApplication();
         final IARDrone drone = app.getARDrone();
@@ -27,7 +42,7 @@ public class ControlActivity extends ActionBarActivity {
         forward.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN)
-                    drone.getCommandManager().forward(10);
+                    drone.getCommandManager().forward(10);          //The degree of drone reaction, Default: 10
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
 
@@ -39,7 +54,7 @@ public class ControlActivity extends ActionBarActivity {
         backward.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN)
-                    drone.getCommandManager().backward(10);
+                    drone.getCommandManager().backward(10);         //The degree of drone reaction, Default: 10
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
 
@@ -52,7 +67,7 @@ public class ControlActivity extends ActionBarActivity {
         left.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN)
-                    drone.getCommandManager().goLeft(10);
+                    drone.getCommandManager().goLeft(10);           //The degree of drone reaction, Default: 10
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
 
@@ -65,7 +80,7 @@ public class ControlActivity extends ActionBarActivity {
         right.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN)
-                    drone.getCommandManager().goRight(10);
+                    drone.getCommandManager().goRight(10);          //The degree of drone reaction, Default: 10
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
 
@@ -77,7 +92,7 @@ public class ControlActivity extends ActionBarActivity {
         up.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN)
-                    drone.getCommandManager().up(40);
+                    drone.getCommandManager().up(40);               //The degree of drone reaction, Default: 40
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
 
@@ -89,7 +104,7 @@ public class ControlActivity extends ActionBarActivity {
         down.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN)
-                    drone.getCommandManager().down(40);
+                    drone.getCommandManager().down(40);             //The degree of drone reaction, Default: 40
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
 
@@ -102,7 +117,7 @@ public class ControlActivity extends ActionBarActivity {
         spinLeft.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN)
-                    drone.getCommandManager().spinLeft(20);
+                    drone.getCommandManager().spinLeft(20);         //The degree of drone reaction, Default: 20
                 else if (event.getAction() == MotionEvent.ACTION_UP)
 
                     drone.hover();
@@ -111,12 +126,12 @@ public class ControlActivity extends ActionBarActivity {
             }
         });
 
-
+        //  Controls the right yaw of the drone.
         Button spinRight = (Button) findViewById(R.id.cmdRightYaw);
         spinRight.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN)
-                    drone.getCommandManager().spinRight(20);
+                    drone.getCommandManager().spinRight(20);        //The degree of drone reaction, Default: 20
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
 
@@ -124,6 +139,8 @@ public class ControlActivity extends ActionBarActivity {
             }
         });
 
+        //  Creates a toggle button that switches between initiating
+        //  takeoff and landing of the drone.
         final Button landing = (Button) findViewById(R.id.cmdLandToggle);
         landing.setOnClickListener(new View.OnClickListener() {
             boolean isFlying = false;
@@ -140,6 +157,9 @@ public class ControlActivity extends ActionBarActivity {
             }
         });
 
+        //  Triggers emergency shutdown of drone
+        //  After this is used, drone must either have emergency mode reset
+        //  or be power cycled before flight will be allowed again.
         Button emergency = (Button) findViewById(R.id.cmdEmergency);
         emergency.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
