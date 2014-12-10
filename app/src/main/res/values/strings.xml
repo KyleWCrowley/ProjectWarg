@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Project Warg</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>]
+    <string name="control_activity">Controller</string>
+    <string name="terms_and_conditions">
+        In using this application I hereby agree to release the developers from liability.\n\nI understand that any damage to any person(s) or property as a result of my using this application will be attributed to improper use and not the design of the application.
+    </string>
+    <string name="pitch">Pitch Sensitivity</string>
+    <string name="yaw">Yaw Sensitivity</string>
+    <string name="max_speed">Maximum Speed</string>
+    <string name="max_height">Maximum Height</string>
+
+    <string name="help_title">Help Menu</string>
+    <string name="help_message"> Below are some immediate troubleshooting buttons that might
+                                 assist you with the Project Warg AR Drone Application. If
+                                 The problem still persists, please click on the "Email" button
+                                 below and send an email to the Project Warg team. </string>
+    <string name="software_version">Software Version</string>
+    <string name="version">1.0.0</string>
+
+</resources>

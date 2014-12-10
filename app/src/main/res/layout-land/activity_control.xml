@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_row="0"
+        android:layout_column="0">
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/space12" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/space14" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/space15" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/space13" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Up"
+            android:id="@+id/cmdUp"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/space12"
+            android:layout_toRightOf="@+id/space12"
+            android:layout_toLeftOf="@+id/space14"
+            android:longClickable="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Left Yaw"
+            android:id="@+id/cmdLeftYaw"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/cmdUp"
+            android:layout_toStartOf="@+id/cmdUp"
+            android:layout_above="@+id/space13"
+            android:layout_below="@+id/space12" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Right Yaw"
+            android:id="@+id/cmdRightYaw"
+            android:layout_alignTop="@+id/cmdLeftYaw"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/cmdUp"
+            android:layout_toEndOf="@+id/cmdUp"
+            android:layout_alignBottom="@+id/cmdLeftYaw" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Down"
+            android:id="@+id/cmdDown"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/space13"
+            android:layout_toLeftOf="@+id/space15"
+            android:layout_toStartOf="@+id/space15"
+            android:layout_alignTop="@+id/space15" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_row="0"
+        android:layout_column="1" >
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/space16" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/space11" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/space11"
+            android:layout_alignEnd="@+id/space11"
+            android:id="@+id/space17" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/space18" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forward"
+            android:id="@+id/cmdForward"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/space16"
+            android:layout_toStartOf="@+id/cmdRight"
+            android:layout_alignBottom="@+id/space11"
+            android:layout_toLeftOf="@+id/cmdRight" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Left"
+            android:id="@+id/cmdLeft"
+            android:layout_below="@+id/space16"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/space16"
+            android:layout_alignEnd="@+id/space16"
+            android:layout_above="@+id/space18" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Right"
+            android:id="@+id/cmdRight"
+            android:layout_below="@+id/space11"
+            android:layout_alignRight="@+id/space11"
+            android:layout_alignEnd="@+id/space11"
+            android:layout_alignBottom="@+id/cmdLeft"
+            android:layout_alignLeft="@+id/space11"
+            android:layout_alignStart="@+id/space11" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Backward"
+            android:id="@+id/cmdBackward"
+            android:layout_alignTop="@+id/space17"
+            android:layout_alignLeft="@+id/cmdForward"
+            android:layout_alignStart="@+id/cmdForward"
+            android:layout_toStartOf="@+id/space17"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/space17" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_row="1"
+        android:layout_column="0">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Emergency Stop"
+            android:id="@+id/cmdEmergency"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_row="1"
+        android:layout_column="1">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Take Off/Land"
+            android:id="@+id/cmdLandToggle"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</GridLayout>
