@@ -8,7 +8,7 @@ import android.view.View;
 
 import de.yadrone.base.IARDrone;
 
-public class MenuActivity extends Activity{
+public class MenuActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
@@ -16,8 +16,8 @@ public class MenuActivity extends Activity{
         initialize();
     }
 
-    private void initialize(){
-        YADroneApplication app = (YADroneApplication)getApplication();
+    private void initialize() {
+        YADroneApplication app = (YADroneApplication) getApplication();
         IARDrone drone = app.getARDrone();
         drone.start();
     }
@@ -27,30 +27,31 @@ public class MenuActivity extends Activity{
         startActivity(intent);
     }
 
-    public void buttonSettings(View view)   {
+    public void buttonSettings(View view) {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 
-    public void buttonAccelerometer(View view)   {
-        Intent intent = new Intent(this, AccelerometerActivity.class );
+    public void buttonAccelerometer(View view) {
+        Intent intent = new Intent(this, AccelerometerActivity.class);
         startActivity(intent);
     }
 
-    public void buttonGyroscope(View view)   {
-        Intent intent = new Intent(this, GyroscopeActivity.class );
+    public void buttonGyroscope(View view) {
+        Intent intent = new Intent(this, GyroscopeActivity.class);
         startActivity(intent);
     }
 
-    public void buttonHelp(View view)  {
+    public void buttonHelp(View view) {
         Intent intent = new Intent(this, HelpActivity.class);
         startActivity(intent);
     }
+
     public void buttonExit(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.putExtra("EXIT",true);
-        YADroneApplication app = (YADroneApplication)getApplication();
+        intent.putExtra("EXIT", true);
+        YADroneApplication app = (YADroneApplication) getApplication();
         IARDrone drone = app.getARDrone();
         drone.stop();
 

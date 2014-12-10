@@ -9,10 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-
-
-
-
 public class MainActivity extends Activity {
 
     @Override
@@ -20,7 +16,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(getIntent().getBooleanExtra("EXIT",false))   {
+        if (getIntent().getBooleanExtra("EXIT", false)) {
             finish();
         }
     }

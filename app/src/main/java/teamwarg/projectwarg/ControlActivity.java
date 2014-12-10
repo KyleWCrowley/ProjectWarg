@@ -19,15 +19,14 @@ public class ControlActivity extends ActionBarActivity {
         createControls();
     }
 
-    private void createControls(){
-        YADroneApplication app = (YADroneApplication)getApplication();
+    private void createControls() {
+        YADroneApplication app = (YADroneApplication) getApplication();
         final IARDrone drone = app.getARDrone();
 
-        Button forward = (Button)findViewById(R.id.cmdForward);
+        Button forward = (Button) findViewById(R.id.cmdForward);
         forward.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event)
-            {
-                if(event.getAction() == MotionEvent.ACTION_DOWN)
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     drone.getCommandManager().forward(10);
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
@@ -36,11 +35,10 @@ public class ControlActivity extends ActionBarActivity {
             }
         });
 
-        Button backward = (Button)findViewById(R.id.cmdBackward);
+        Button backward = (Button) findViewById(R.id.cmdBackward);
         backward.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event)
-            {
-                if(event.getAction() == MotionEvent.ACTION_DOWN)
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     drone.getCommandManager().backward(10);
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
@@ -50,11 +48,10 @@ public class ControlActivity extends ActionBarActivity {
         });
 
 
-        Button left = (Button)findViewById(R.id.cmdLeft);
+        Button left = (Button) findViewById(R.id.cmdLeft);
         left.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event)
-            {
-                if(event.getAction() == MotionEvent.ACTION_DOWN)
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     drone.getCommandManager().goLeft(10);
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
@@ -64,11 +61,10 @@ public class ControlActivity extends ActionBarActivity {
         });
 
 
-        Button right = (Button)findViewById(R.id.cmdRight);
+        Button right = (Button) findViewById(R.id.cmdRight);
         right.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event)
-            {
-                if(event.getAction() == MotionEvent.ACTION_DOWN)
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     drone.getCommandManager().goRight(10);
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
@@ -77,11 +73,10 @@ public class ControlActivity extends ActionBarActivity {
             }
         });
 
-        Button up = (Button)findViewById(R.id.cmdUp);
+        Button up = (Button) findViewById(R.id.cmdUp);
         up.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event)
-            {
-                if(event.getAction() == MotionEvent.ACTION_DOWN)
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     drone.getCommandManager().up(40);
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
@@ -90,11 +85,10 @@ public class ControlActivity extends ActionBarActivity {
             }
         });
 
-        Button down = (Button)findViewById(R.id.cmdDown);
+        Button down = (Button) findViewById(R.id.cmdDown);
         down.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event)
-            {
-                if(event.getAction() == MotionEvent.ACTION_DOWN)
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     drone.getCommandManager().down(40);
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
@@ -104,11 +98,10 @@ public class ControlActivity extends ActionBarActivity {
         });
 
 
-        Button spinLeft = (Button)findViewById(R.id.cmdLeftYaw);
+        Button spinLeft = (Button) findViewById(R.id.cmdLeftYaw);
         spinLeft.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event)
-            {
-                if(event.getAction() == MotionEvent.ACTION_DOWN)
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     drone.getCommandManager().spinLeft(20);
                 else if (event.getAction() == MotionEvent.ACTION_UP)
 
@@ -119,11 +112,10 @@ public class ControlActivity extends ActionBarActivity {
         });
 
 
-        Button spinRight = (Button)findViewById(R.id.cmdRightYaw);
+        Button spinRight = (Button) findViewById(R.id.cmdRightYaw);
         spinRight.setOnTouchListener(new View.OnTouchListener() {
-            public boolean onTouch(View v, MotionEvent event)
-            {
-                if(event.getAction() == MotionEvent.ACTION_DOWN)
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     drone.getCommandManager().spinRight(20);
                 else if (event.getAction() == MotionEvent.ACTION_UP)
                     drone.hover();
@@ -132,18 +124,15 @@ public class ControlActivity extends ActionBarActivity {
             }
         });
 
-        final Button landing = (Button)findViewById(R.id.cmdLandToggle);
+        final Button landing = (Button) findViewById(R.id.cmdLandToggle);
         landing.setOnClickListener(new View.OnClickListener() {
             boolean isFlying = false;
-            public void onClick(View v)
-            {
-                if (!isFlying)
-                {
+
+            public void onClick(View v) {
+                if (!isFlying) {
                     drone.takeOff();
                     landing.setText("Landing");
-                }
-                else
-                {
+                } else {
                     drone.landing();
                     landing.setText("Take Off");
                 }
@@ -151,10 +140,9 @@ public class ControlActivity extends ActionBarActivity {
             }
         });
 
-        Button emergency = (Button)findViewById(R.id.cmdEmergency);
+        Button emergency = (Button) findViewById(R.id.cmdEmergency);
         emergency.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 drone.reset();
             }
         });
